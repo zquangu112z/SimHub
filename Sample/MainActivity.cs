@@ -18,11 +18,11 @@ using String = Java.Lang.String;
 
 namespace Sample
 {
-    [Activity(Label = "Sample", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "SimHub", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : BaseActivity, IOnTabReselectedListener, ViewPager.IOnPageChangeListener
     {
         private MyPagerAdapter adapter;
-        private int count = 1;
+        //private int count = 1;
         private int currentColor;
         private Drawable oldBackground;
         private ViewPager pager;
@@ -137,11 +137,15 @@ namespace Sample
             switch (item.ItemId)
             {
 
-                case Resource.Id.action_icons:
-
-                    var intent = new Intent(this, typeof(SecondActivity));
-                    StartActivity(intent);
-                    return true;
+//                case Resource.Id.action_icons:
+//
+//                    var intent = new Intent(this, typeof(SecondActivity));
+//                    StartActivity(intent);
+//                    return true;
+			case Resource.Id.action_contact:
+				var intent = new Intent (this, typeof(UserInformation));
+				StartActivity (intent);
+				return true;
 
                 default:
                     return base.OnOptionsItemSelected(item);
@@ -155,8 +159,7 @@ namespace Sample
     {
         private readonly string[] Titles =
         {
-            "Categories", "Home", "Top Paid", "Top Free", "Top Grossing", "Top New Paid",
-            "Top New Free", "Trending"
+            "Viettel", "Mobifone", "Vinaphone", "Another"
         };
 
         public MyPagerAdapter(FragmentManager fm) : base(fm)

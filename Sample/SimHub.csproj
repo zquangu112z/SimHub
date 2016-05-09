@@ -72,6 +72,7 @@
     <Compile Include="BaseActivity.cs" />
     <Compile Include="SuperAwesomeCardFragment.cs" />
     <Compile Include="SecondActivity.cs" />
+    <Compile Include="UserInformation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -135,6 +136,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_attach_money_white_48dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_home_white_48dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_people_white_48dp.png" />
+    <AndroidResource Include="Resources\layout\acivity_userinformation.axml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PagerSlidingTabStrip\PagerSlidingTabStrip.csproj">
