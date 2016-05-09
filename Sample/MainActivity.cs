@@ -93,31 +93,26 @@ namespace Sample
             currentColor = newColor;
         }
 
-        [Export("onColorClicked")]
-        public void OnColorClicked(View v)
-        {
-            var color = Color.ParseColor(v.Tag.ToString());
-            ChangeColor(color);
-        }
 
         protected override void OnSaveInstanceState(Bundle outState)
         {
             base.OnSaveInstanceState(outState);
-            outState.PutInt("currentColor", currentColor);
+            //outState.PutInt("currentColor", currentColor);
         }
 
         protected override void OnRestoreInstanceState(Bundle savedInstanceState)
         {
             base.OnRestoreInstanceState(savedInstanceState);
-            currentColor = savedInstanceState.GetInt("currentColor");
-            ChangeColor(new Color(currentColor));
+            //currentColor = savedInstanceState.GetInt("currentColor");
+            //ChangeColor(new Color(currentColor));
         }
 
         #region IOnTabReselectedListener implementation
 
         public void OnTabReselected(int position)
         {
-            Toast.MakeText(this, "Tab reselected: " + position, ToastLength.Short).Show();
+			//TODO sort list tai day
+            Toast.MakeText(this, "Tab reselected: " + position + "| Xin loi, tinh nang sap xep chua hoan thanh", ToastLength.Short).Show();
         }
 
         #endregion
@@ -184,7 +179,7 @@ namespace Sample
 
         public override Fragment GetItem(int position)
         {
-            return SuperAwesomeCardFragment.NewInstance(position);
+			return ListSimFragment.NewInstance(position);
         }
 
         #endregion

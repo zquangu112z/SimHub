@@ -70,9 +70,8 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseActivity.cs" />
-    <Compile Include="SuperAwesomeCardFragment.cs" />
-    <Compile Include="SecondActivity.cs" />
     <Compile Include="UserInformation.cs" />
+    <Compile Include="ListSimFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -137,6 +136,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_home_white_48dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_people_white_48dp.png" />
     <AndroidResource Include="Resources\layout\acivity_userinformation.axml" />
+    <AndroidResource Include="Resources\layout\fragment_listsim.axml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PagerSlidingTabStrip\PagerSlidingTabStrip.csproj">
