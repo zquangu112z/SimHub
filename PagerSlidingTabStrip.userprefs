@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="Sample/Sample.csproj">
+﻿<Properties StartupItem="Sample/SimHub.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (Lollipop)" />
   <MonoDevelop.Ide.Workbench ActiveDocument="PagerSlidingTabStrip.nuspec">
     <Files>
