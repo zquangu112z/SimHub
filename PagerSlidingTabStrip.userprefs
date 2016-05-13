@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Sample/SimHub.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.E8AZCY26X122" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sample/ListSimFragment.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus_5_API_22_2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sample/UserInformation.cs">
     <Files>
-      <File FileName="Sample/ListSimFragment.cs" Line="95" Column="21" />
-      <File FileName="Sample/SimInformation.cs" Line="21" Column="39" />
+      <File FileName="Sample/UserInformation.cs" Line="103" Column="7" />
+      <File FileName="Sample/SimInformation.cs" Line="18" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

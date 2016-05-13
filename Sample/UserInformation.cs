@@ -18,7 +18,7 @@ using Android.Graphics.Drawables;
 
 namespace Sample
 {
-	[Activity (Label = "UserInformation")]			
+	[Activity (Label = "Profile")]			
 	public class UserInformation : AppCompatActivity
 	{
 		TextView _textViewUserName;
@@ -31,7 +31,7 @@ namespace Sample
 		Button _buttonLicense;
 		Button _buttonLogout;
 
-		public Android.Support.V7.Widget.Toolbar _toolbar { get; set; }
+		Android.Support.V7.Widget.Toolbar _toolbar { get; set; }
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -100,6 +100,7 @@ namespace Sample
 				//go back login activity
 				Intent intent = new Intent (this, typeof(LoginActivity));
 				StartActivity (intent);
+				//OverridePendingTransition(Android.Resource.Anim.left_in, Resource.Anim.left_out);
 
 				Intent intent2 = new Intent("finish_main_activity");
 				SendBroadcast(intent2);

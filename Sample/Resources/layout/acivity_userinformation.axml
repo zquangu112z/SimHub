@@ -5,129 +5,188 @@
     android:layout_height="match_parent">
     <include
         layout="@layout/toolbar" />
-<!--name-->
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_lable_name"
-            android:text="Name:  " />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_name"
-            android:text="Quang Ngu " />
-    </LinearLayout>
-<!--age-->
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_lable_name"
-            android:text="Name:  " />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_age"
-            android:text="21 " />
-    </LinearLayout>
-<!--	phone-->
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_lable_phone"
-            android:text="Phone:  " />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_phone"
-            android:text="1668679909" />
-    </LinearLayout>
-<!--	adress-->
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_lable_address"
-            android:text="Address:  " />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_address"
-            android:text="ktx Bach Khoa" />
-    </LinearLayout>
-<!--	date joined-->
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_lable_date_joined"
-            android:text="Date Joined:  " />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_date_joined"
-            android:text="01/01/2016" />
-    </LinearLayout>
-<!--	sign-->
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_sign"
-            android:text="Uy tin - Nhanh chong"
-            android:textColor="@color/greenDark" />
-    </LinearLayout>
-<!--	status-->
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_lable_status"
-            android:text="Status:  " />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_status"
-            android:text="Duoc phep ban sim" />
-    </LinearLayout>
-    <Button
-        android:id="@+id/btn_logout"
+        android:padding="15dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="#307FC1"
-        android:text="Logout"
-        android:textColor="@android:color/white" />
-    <Button
-        android:id="@+id/btn_license"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="#307FC1"
-        android:textColor="@android:color/white"
-        android:text="buy license"
-        android:visibility="invisible" />
+        android:layout_height="match_parent">
+    <!--name-->
+        <LinearLayout
+            android:weightSum="5"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_lable_name"
+                android:text="Name:  " />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_name"
+                android:text="Quang Ngu " />
+        </LinearLayout>
+        <View
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray" />
+    <!--age-->
+        <LinearLayout
+            android:weightSum="5"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_lable_name"
+                android:text="Name:  " />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_age"
+                android:text="21 " />
+        </LinearLayout>
+        <View
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray" />
+    <!--	phone-->
+        <LinearLayout
+            android:weightSum="5"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_lable_phone"
+                android:text="Phone:  " />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_phone"
+                android:text="1668679909" />
+        </LinearLayout>
+        <View
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray" />
+    <!--	adress-->
+        <LinearLayout
+            android:weightSum="5"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_lable_address"
+                android:text="Address:  " />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_address"
+                android:text="ktx Bach Khoa" />
+        </LinearLayout>
+        <View
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray" />
+    <!--	date joined-->
+        <LinearLayout
+            android:weightSum="5"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_lable_date_joined"
+                android:text="Date Joined:  " />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_date_joined"
+                android:text="01/01/2016" />
+        </LinearLayout>
+        <View
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray" />
+    <!--	sign-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_sign"
+                android:text="Uy tin - Nhanh chong"
+                android:textColor="@color/greenDark" />
+        </LinearLayout>
+        <View
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray" />
+    <!--	status-->
+        <LinearLayout
+            android:weightSum="5"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_lable_status"
+                android:text="Status:  " />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_status"
+                android:text="Duoc phep ban sim" />
+        </LinearLayout>
+        <View
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray" />
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="#307FC1"
+            android:text="Logout"
+            android:textColor="@color/green" />
+        <Button
+            android:id="@+id/btn_license"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="#307FC1"
+            android:textColor="@android:color/white"
+            android:text="buy license"
+            android:visibility="invisible" />
+    </LinearLayout>
 </LinearLayout>
