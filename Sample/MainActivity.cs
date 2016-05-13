@@ -80,6 +80,9 @@ namespace Sample
 			pager.Adapter = adapter;
 			tabs.SetViewPager (pager);
 
+			//load all sim rows TODO: "loadmorelistview"
+			initData ();
+
 			var pageMargin = (int)TypedValue.ApplyDimension (ComplexUnitType.Dip, 4, Resources.DisplayMetrics);
 			pager.PageMargin = pageMargin;
 			pager.CurrentItem = 1;
@@ -97,8 +100,19 @@ namespace Sample
 			_finishBroadcastReciever = new FinishBroadcastReceiver (this);
 			RegisterReceiver (_finishBroadcastReciever, new IntentFilter ("finish_main_activity"));
 			//-----------------
+
 		}
 
+		private async void initData(){
+			//list sim
+			string urlRequest = LoginActivity._rootURL + "sims";
+			JsonValue jsonDoc = await FetchDataAsync (urlRequest);
+			Console.WriteLine("-----------------" + jsonDoc.ToString()); 
+
+			//Du lieu tat ca cac sim 
+			simsMain = JsonConvert.DeserializeObject<List<RootObject>> (jsonDoc.ToString());
+			pager.Adapter.NotifyDataSetChanged();
+		}
 
 		//TODO rmv
 		private void ChangeColor (Color newColor)
@@ -204,7 +218,7 @@ namespace Sample
 				return base.OnOptionsItemSelected (item);
 			}
 		}
-
+		#endregion
 		private async Task<JsonValue> FetchDataAsync (string url)
 		{
 			// Create an HTTP web request using the URL:
@@ -226,7 +240,7 @@ namespace Sample
 				}
 			}
 		}
-		#endregion
+
 	}
 
 

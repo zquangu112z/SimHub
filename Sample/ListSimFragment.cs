@@ -41,6 +41,7 @@ using Android.Widget;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Android.Content;
+using Java.IO;
 
 namespace Sample
 {
@@ -96,10 +97,18 @@ namespace Sample
 		void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 		{
 			var listView = sender as ListView;
-			var t = simsAfterClassify[e.Position];
-			Android.Widget.Toast.MakeText(this.Activity, t.Number, Android.Widget.ToastLength.Short).Show();
+			RootObject s = simsAfterClassify[e.Position];
+			Android.Widget.Toast.MakeText(this.Activity, s.Number, Android.Widget.ToastLength.Short).Show();
 
 			var intent = new Intent (this.Activity, typeof(SimInformation));
+			Bundle b = new Bundle ();
+			b.PutString ("sim_number", s.Number);
+			b.PutString ("sim_price", s.Price);
+			b.PutString ("sim_made", s.Made);
+			//b.PutString ("sim_owner", s.Owner.Name);
+			//b.PutString ("sim_owner_phone", s.Owner.Phone);
+			b.PutString ("sim_owner_id", s.OwnerId.ToString());
+			intent.PutExtra("sim", b);
 			StartActivity (intent);
 		}
 
@@ -154,23 +163,23 @@ namespace Sample
 		private void initData(int pos){
 			//TODO: load du lieu theo pos
 			//0 viettel, 1 mobifone, 2 vinaphone, 3 another
-			MainActivity.simsMain = new List<RootObject>();
+			//MainActivity.simsMain = new List<RootObject>();
 
-			string[] number = { "123456123", "123456456", "123456789", "123456234", "123456567"};
-			string[] price = { "1000", "1000", "2000", "3000", "4000"};
-			string[] made = { "viettel", "mobifone", "vinaphone", "mobifone", "viettel" };
-			string[] owner = { "ngu", "ngu", "ngu", "ngu", "ngu" };
+			//string[] number = { "123456123", "123456456", "123456789", "123456234", "123456567"};
+			//string[] price = { "1000", "1000", "2000", "3000", "4000"};
+			//string[] made = { "viettel", "mobifone", "vinaphone", "mobifone", "viettel" };
+			//string[] owner = { "ngu", "ngu", "ngu", "ngu", "ngu" };
 
 
-			for (int i = 0; i < number.Length; i++){
-				RootObject sim = new RootObject ();
-				sim.Number = number [i];
-				sim.Price = price [i];
-				sim.Made = made [i];
-				//sim.Owner = owner [i];
-				//RootObject sim = new RootObject (number [i], price [i], owner [i], made [i]);
-				MainActivity.simsMain.Add (sim);
-			}
+//			for (int i = 0; i < number.Length; i++){
+//				RootObject sim = new RootObject ();
+//				sim.Number = number [i];
+//				sim.Price = price [i];
+//				sim.Made = made [i];
+//				//sim.Owner = owner [i];
+//				//RootObject sim = new RootObject (number [i], price [i], owner [i], made [i]);
+//				MainActivity.simsMain.Add (sim);
+//			}
 		}
 	}
 }
