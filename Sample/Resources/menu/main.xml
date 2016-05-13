@@ -5,6 +5,13 @@
 
 <!--  <item android:id="@+id/action_icons" android:icon="@drawable/ic_people_white_48dp" app:showAsAction="ifRoom" />-->
 
+<item
+    android:id="@+id/action_search"
+    android:icon="@drawable/ic_search_white"
+    android:title="@string/action_search"
+    app:showAsAction="always|collapseActionView"
+    app:actionViewClass="android.support.v7.widget.SearchView" 
+    />
   <item
     android:id="@+id/action_contact"
     android:icon="@drawable/ic_action_user"

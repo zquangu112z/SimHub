@@ -64,6 +64,10 @@
     <Reference Include="Xamarin.Android.Support.v7.AppCompat">
       <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -72,6 +76,13 @@
     <Compile Include="BaseActivity.cs" />
     <Compile Include="UserInformation.cs" />
     <Compile Include="ListSimFragment.cs" />
+    <Compile Include="Models\Sim.cs" />
+    <Compile Include="Adapters\ListSimAdapter.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="LoginActivity.cs" />
+    <Compile Include="Models\Owner.cs" />
+    <Compile Include="Adapters\MyPagerAdapter.cs" />
+    <Compile Include="SimInformation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -137,6 +148,12 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_people_white_48dp.png" />
     <AndroidResource Include="Resources\layout\acivity_userinformation.axml" />
     <AndroidResource Include="Resources\layout\fragment_listsim.axml" />
+    <AndroidResource Include="Resources\layout\item_listsim.axml" />
+    <AndroidResource Include="Resources\drawable\ListSimSelector.xml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_search_white.png" />
+    <AndroidResource Include="Resources\layout\activity_login.axml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher_sim.png" />
+    <AndroidResource Include="Resources\layout\activity_sim_information.axml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PagerSlidingTabStrip\PagerSlidingTabStrip.csproj">
@@ -152,4 +169,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Adapters\" />
+  </ItemGroup>
 </Project>
