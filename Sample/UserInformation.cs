@@ -11,7 +11,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V7.App;
+using Android.Support.V7.Widget;
 using System.ComponentModel;
+using Android.Graphics;
+using Android.Graphics.Drawables;
 
 namespace Sample
 {
@@ -28,7 +31,7 @@ namespace Sample
 		Button _buttonLicense;
 		Button _buttonLogout;
 
-		public Android.Support.V7.Widget.Toolbar Toolbar { get; set; }
+		public Android.Support.V7.Widget.Toolbar _toolbar { get; set; }
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -44,6 +47,17 @@ namespace Sample
 			_textViewUserStatus = FindViewById<TextView> (Resource.Id.tv_status);
 			_buttonLicense = FindViewById<Button> (Resource.Id.btn_license);
 			_buttonLogout = FindViewById<Button> (Resource.Id.btn_logout);
+
+
+			//toolbar
+			_toolbar = FindViewById<Android.Support.V7.Widget.Toolbar> (Resource.Id.toolbar);
+			if (_toolbar != null) {
+				SetSupportActionBar (_toolbar);
+				SupportActionBar.SetDisplayHomeAsUpEnabled (true);
+				SupportActionBar.SetHomeButtonEnabled (true);
+				//SupportActionBar
+			}			
+				
 
 			//TODO: get user information
 			ISharedPreferences prefs = Application.Context.GetSharedPreferences (LoginActivity._statusLogin, FileCreationMode.Private);
@@ -93,6 +107,22 @@ namespace Sample
 				MainActivity.simsMain.Clear();
 			};
 		}
+
+
+		public override bool OnOptionsItemSelected (IMenuItem item)
+		{
+			// Handle presses on the action bar items
+			switch (item.ItemId) {
+			case Android.Resource.Id.Home:
+				OnBackPressed ();
+				return true;
+
+			default:
+				return base.OnOptionsItemSelected (item);
+			}
+		}
+
+
 		/**
 		 * TODO Luu trang thai, luc login thanh cong
 		 */
@@ -103,6 +133,10 @@ namespace Sample
 			editor.PutBoolean ("login", b);
 			editor.Apply ();    
 		}
+
+
+
+
 	}
 }
 
